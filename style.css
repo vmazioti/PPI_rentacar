@@ -1,0 +1,34 @@
+/* css reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* colors orange: #F16335 yellow: #FFD000*/
+
+.ecatalog {
+  display: grid;
+  grid-template-columns: repeat(2, 2 fr, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  align-items: center;
+  margin: 50px;
+  padding: 10px;
+  border: solid black;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.chart,
+.category_details {
+  border: dotted;
+  border-color: lightgrey;
+  padding: 10px;
+}
+
+.chart h3 {
+  color: #ffd000;
+}
