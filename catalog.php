@@ -27,6 +27,13 @@
             <option value="minibus">Mini Bus</option>
             <option value="van">Van</option>
           </select>
+          <br /><br />
+         <span class="info">Total: </span><?php  echo "hello"; ?>
+         <br><br>
+         <span class="info">Car Models: </span><?php  echo "hello"; ?>
+         <br><br>
+         <span class="info">Car Manufacturers: </span><?php  echo "hello"; ?>
+         <br><br>
         </div>
       </div>
     </section>
