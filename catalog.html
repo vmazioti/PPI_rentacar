@@ -20,17 +20,20 @@
       <div class="content">
         <div class="chart">
           <h3>Categories</h3>
-          <canvas id="myChart"></canvas>
+          <canvas id="barChart"></canvas>
           <script>
-            const ctx = document.getElementById("myChart").getContext("2d");
-            const myChart = new Chart(ctx, {
+            var categoriesArray= {"Coupe": 2, "Sedan": 5, "Van": 6};
+            const context = document
+              .getElementById("barChart")
+              .getContext("2d");
+            const barChart = new Chart(context, {
               type: "bar",
               data: {
-                labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+                labels: ["Coupe", "Sedan", "Van"],
                 datasets: [
                   {
                     label: "# of Votes",
-                    data: [12, 19, 3, 5, 2, 3],
+                    data: [categoriesArray["Coupe"], categoriesArray["Sedan"], categoriesArray["Van"]],
                     backgroundColor: [
                       "rgba(255, 99, 132, 0.2)",
                       "rgba(54, 162, 235, 0.2)",
