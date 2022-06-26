@@ -21,7 +21,21 @@
         <div class="chart">
           <h3>Categories</h3>
           <canvas id="barChart"></canvas>
+          <?php
+            $categories_by_count=mysqli_query($conn, "SELECT category, COUNT(category) FROM cars GROUP BY category");
+            $data = json_encode(mysqli_fetch_assoc($categories_by_count));
+            $obj = new stdClass();
+            while($data = mysqli_fetch_assoc($categories_by_count)){
+              $obj = (object) [$data['category'] => $data['COUNT(category)']];              
+            }
+            
+            // $json_obj=json_encode($obj);
+            
+            
+          ?>
           <script>
+            
+            var results = <?php echo $obj ?>;
             var categoriesArray= {"Coupe": 2, "Sedan": 5, "Van": 6};
             const context = document
               .getElementById("barChart")
